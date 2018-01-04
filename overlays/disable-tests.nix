@@ -3,8 +3,10 @@
 self: super:
 
 let
+
   overrideDerivation = super.stdenv.lib.overrideDerivation;
-in
+
+in rec
 {
 
   ## Broken on macOS.
