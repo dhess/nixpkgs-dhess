@@ -2,7 +2,7 @@ self: super:
 
 let
 
-  inherit (super) stdenv haskell;
+  inherit (super) haskell;
 
   lib = import ../pkgs/haskell/lib.nix {
     inherit (super) lib;
@@ -18,7 +18,7 @@ let
 in
 {
 
-  haskellPackages822 = haskell.packages.ghc822.extend (self: super:
+  haskellPackages = super.haskellPackages.extend (self: super:
     with haskell.lib;
     rec {
 
@@ -52,6 +52,6 @@ in
     }
   );
 
-  installedHaskellPackages822 = lib.mkInstalledPackages problems;
+  installedHaskellPackages = lib.mkInstalledPackages problems;
 
 }

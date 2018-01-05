@@ -9,8 +9,8 @@ in rec
 
   haskell822-env = buildEnv {
     name = "haskell822-env";
-    paths = with self.haskellPackages822; [
-      (ghcWithHoogle self.installedHaskellPackages822)
+    paths = with self.haskellPackages; [
+      (ghcWithHoogle self.installedHaskellPackages)
 
       cabal-install
       #dash-haskell
