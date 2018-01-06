@@ -27,23 +27,6 @@ in rec
     meta.platforms = self.haskellPackages.ghc.meta.platforms;
   };
 
-  haskell821-env = buildEnv {
-    name = "haskell821-env";
-    paths = with self.haskellPackages821; [
-      (ghcWithHoogle self.installedHaskellPackages821)
-
-      cabal-install
-      #dash-haskell
-      #ghc-mod
-      hindent
-      hlint
-      hpack
-      hscolour
-      structured-haskell-mode
-      stylish-haskell
-    ];
-  };
-
   haskell802-env = buildEnv {
     name = "haskell802-env";
     paths = with self.haskellPackages802; [

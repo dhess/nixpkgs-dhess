@@ -79,7 +79,7 @@ in rec
          epkgs.nix-mode
          epkgs.nix-sandbox
          epkgs.nixos-options
-         epkgs.org-plus-contrib
+         #epkgs.org-plus-contrib
          epkgs.paredit
          epkgs.popup
          epkgs.projectile

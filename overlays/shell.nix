@@ -20,9 +20,9 @@ in
       gitAndTools.git-extras
       gnupg
       gnused
-      haskellPackages821.dhess-ssh-keygen
-      haskellPackages821.fm-assistant
-      haskellPackages802.hpack-convert
+      haskellPackages.dhess-ssh-keygen
+      haskellPackages.fm-assistant
+      haskellPackages.hpack-convert
       nox
       pinentry_mac
       lftp
