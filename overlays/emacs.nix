@@ -12,6 +12,7 @@ in rec
   ## Emacs.
   emacs-env = buildEnv {
     name = "emacs-env";
+    meta.platforms = emacs.meta.platforms;
     paths = with super; [
       (let customEmacsPackages =
          (emacsPackagesNgGen emacs).overrideScope (super: self: {

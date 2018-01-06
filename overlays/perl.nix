@@ -12,14 +12,12 @@ in
   # $HOME/.nix-profile/lib/perl5/site_perl
 
   perl-env = buildEnv {
-
     name = "perl-env";
-
     paths = with perlPackages; [
       perl
       DevelTrace
       FileCopyRecursive
     ];
-
+    meta.platforms = super.perlPackages.perl.meta.platforms;
   };
 }

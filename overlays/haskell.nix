@@ -2,10 +2,12 @@ self: super:
 
 let
 
-  inherit (super) buildEnv haskell;
+  inherit (super) lib buildEnv haskell;
 
 in rec
 {
+
+  haskell-env = haskell822-env;
 
   haskell822-env = buildEnv {
     name = "haskell822-env";
@@ -22,6 +24,7 @@ in rec
       structured-haskell-mode
       stylish-haskell
     ];
+    meta.platforms = self.haskellPackages.ghc.meta.platforms;
   };
 
   haskell821-env = buildEnv {

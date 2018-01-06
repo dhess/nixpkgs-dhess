@@ -18,6 +18,25 @@ with import (fixedNixPkgs + "/pkgs/top-level/release-lib.nix") {
 
 let
 
+  ## Aggregates are handy for defining jobs (especially for subsets of
+  ## platforms), but they don't provide very useful information in
+  ## Hydra, especially when they die. We use aggregates here to define
+  ## set of jobs, and then splat them into the output attrset so that
+  ## they're more visible in Hydra.
+  
+  enumerateConstituents = aggregate: lib.listToAttrs (
+    map (d:
+           let
+             name = (builtins.parseDrvName d.name).name;
+             system = d.system;
+           in
+             { name = name + "." + system;
+               value = d;
+             }
+         )
+        aggregate.constituents
+  );
+
   jobs = {
 
     x86_64-darwin = pkgs.releaseTools.aggregate {
@@ -25,19 +44,24 @@ let
       meta.description = "nixpkgs-dhess overlay packages (x86_64-darwin)";
       meta.maintainer = lib.maintainers.dhess;
       constituents = with jobs; [
-        emacs.x86_64-darwin
-        haskellPackages.fm-assistant.x86_64-darwin
-        haskellPackages.dhess-ssh-keygen.x86_64-darwin
-        xtensa-esp32-toolchain.x86_64-darwin
+        ansible-env.x86_64-darwin
+        emacs-env.x86_64-darwin
+        esp-idf-env.x86_64-darwin
+        haskell-env.x86_64-darwin
+        nixops-env.x86_64-darwin
+        nodejs-env.x86_64-darwin
+        opsec-env.x86_64-darwin
+        perl-env.x86_64-darwin
+        python-env.x86_64-darwin
+        selenium-env.x86_64-darwin
+        shell-env.x86_64-darwin
       ];
     };
 
-  } // (mapTestOn ((packagePlatforms pkgs) // rec {
-    haskell.compiler = packagePlatforms pkgs.haskell.compiler;
-    haskellPackages = packagePlatforms pkgs.haskellPackages;
-  }));
+  } // (mapTestOn (packagePlatforms pkgs));
 
 in
 {
   inherit (jobs) x86_64-darwin;
 }
+// enumerateConstituents jobs.x86_64-darwin

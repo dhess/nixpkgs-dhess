@@ -4,18 +4,15 @@ self: super:
 
 let
 
-  inherit (super) buildEnv;
+  inherit (super) lib buildEnv;
 
 in
 {
   shell-env = buildEnv {
-
     name = "shell-env";
     paths = with self; [
-
       ansible
       atomicparsley
-      av-on
       awscli
       aws_shell
       ffmpeg
@@ -30,20 +27,16 @@ in
       pinentry_mac
       lftp
       mediainfo
-      nix-binary-cache-update
-      nix-build-remote
       nix-index
       nix-repl
       pwgen
       scsh
       speedtest-cli
-      sync-fr-xfer
       tarsnap
       terminal-notifier
       tree
       unbound-block-hosts
       unrar
-      wake-leibniz
       wget
       texlive.combined.scheme-medium
       xz
@@ -52,8 +45,7 @@ in
       # *2nix
       cabal2nix
       pypi2nix
-
     ];
-
+    meta.platforms = lib.platforms.darwin;
   };
 }

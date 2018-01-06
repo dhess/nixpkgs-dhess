@@ -2,7 +2,7 @@ self: super:
 
 let
 
-  inherit (super) callPackage buildEnv;
+  inherit (super) lib callPackage buildEnv;
 
 in rec
 {
@@ -15,6 +15,7 @@ in rec
     paths = [
       xtensa-esp32-toolchain
     ];
+    meta.platforms = lib.platforms.darwin;
   };
 
 }
