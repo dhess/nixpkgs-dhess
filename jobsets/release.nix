@@ -48,6 +48,7 @@ let
         emacs-env.x86_64-darwin
         esp-idf-env.x86_64-darwin
         haskell-env.x86_64-darwin
+        mactools-env.x86_64-darwin
         nixops-env.x86_64-darwin
         nixtools-env.x86_64-darwin
         nodejs-env.x86_64-darwin

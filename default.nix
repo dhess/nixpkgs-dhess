@@ -16,6 +16,7 @@ with super.lib;
   (import ./overlays/haskell-packages-822.nix)
   (import ./overlays/haskell.nix)
   (import ./overlays/lib.nix)
+  (import ./overlays/mactools.nix)
   (import ./overlays/misc.nix)
   (import ./overlays/nixtools.nix)
   (import ./overlays/nixops.nix)
