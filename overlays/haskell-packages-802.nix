@@ -21,7 +21,6 @@ in
       Lykah = doJailbreak super.Lykah;
       clay = doJailbreak super.clay;
       concurrent-machines = doJailbreak super.concurrent-machines;
-      configuration-tools = super.configuration-tools_0_3_0;
       filesystem-trees = doJailbreak super.filesystem-trees;
       ghc-exactprint = dontCheck super.ghc-exactprint;
       hakyll = doJailbreak super.hakyll;
@@ -32,12 +31,9 @@ in
       monad-log = doJailbreak super.monad-log;
       pipes-errors = doJailbreak super.pipes-errors;
       process-extras = dontCheck super.process-extras;
-      protolude = super.protolude_0_2;
       shelly = doJailbreak super.shelly;
-      singletons = dontCheck super.singletons_2_3_1;
       store = dontCheck super.store;
       swagger2 = dontHaddock super.swagger2;
-      th-desugar = super.th-desugar_1_7;
       these = doJailbreak super.these;
       time-recurrence = doJailbreak super.time-recurrence;
       wires = doJailbreak super.wires;
