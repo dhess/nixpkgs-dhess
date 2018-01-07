@@ -62,23 +62,6 @@ in rec
     meta.platforms = self.haskellPackages7103.ghc.meta.platforms;
   };
 
-  haskell784-env = buildEnv {
-    name = "haskell784-env";
-    paths = with self.haskellPackages784; [
-      (ghcWithPackages self.installedHaskellPackages784)
-
-      cabal-install
-      #dash-haskell
-      hindent
-      hlint
-      hpack
-      hscolour
-      structured-haskell-mode
-      stylish-haskell
-    ];
-    meta.platforms = self.haskellPackages784.ghc.meta.platforms;
-  };
-
 
   ## Stack environments.
   #

@@ -11,7 +11,6 @@ with super.lib;
   (import ./overlays/emacs.nix)
   (import ./overlays/esp32.nix)
   (import ./overlays/haskell-packages-7103.nix)
-  (import ./overlays/haskell-packages-784.nix)
   (import ./overlays/haskell-packages-802.nix)
   (import ./overlays/haskell-packages-822.nix)
   (import ./overlays/haskell.nix)
