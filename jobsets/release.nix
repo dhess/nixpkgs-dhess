@@ -55,6 +55,9 @@ let
         python-env.x86_64-darwin
         selenium-env.x86_64-darwin
         shell-env.x86_64-darwin
+
+        # Stuff that's not in a buildEnv.
+        cacert.x86_64-darwin
       ];
     };
 
