@@ -7,10 +7,8 @@ let
 in rec
 {
 
-  haskell-env = haskell822-env;
-
-  haskell822-env = buildEnv {
-    name = "haskell822-env";
+  haskell-env = buildEnv {
+    name = "haskell-env";
     paths = with self.haskellPackages; [
       (ghcWithHoogle self.installedHaskellPackages)
 

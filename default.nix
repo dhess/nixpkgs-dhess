@@ -13,7 +13,7 @@ with super.lib;
   (import ./overlays/esp32.nix)
   (import ./overlays/haskell-packages-7103.nix)
   (import ./overlays/haskell-packages-802.nix)
-  (import ./overlays/haskell-packages-822.nix)
+  (import ./overlays/haskell-packages.nix)
   (import ./overlays/haskell.nix)
   (import ./overlays/lib.nix)
   (import ./overlays/mactools.nix)
