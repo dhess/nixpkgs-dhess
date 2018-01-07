@@ -17,6 +17,7 @@ with super.lib;
   (import ./overlays/haskell.nix)
   (import ./overlays/lib.nix)
   (import ./overlays/misc.nix)
+  (import ./overlays/nixtools.nix)
   (import ./overlays/nixops.nix)
   (import ./overlays/nodejs.nix)
   (import ./overlays/opsec.nix)

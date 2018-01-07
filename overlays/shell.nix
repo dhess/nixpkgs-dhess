@@ -23,12 +23,9 @@ in
       haskellPackages.dhess-ssh-keygen
       #haskellPackages.fm-assistant
       #haskellPackages.hpack-convert
-      nox
       pinentry_mac
       lftp
       mediainfo
-      nix-index
-      nix-repl
       pwgen
       scsh
       speedtest-cli
@@ -41,10 +38,6 @@ in
       texlive.combined.scheme-medium
       xz
       youtube-dl
-
-      # *2nix
-      cabal2nix
-      pypi2nix
     ];
     meta.platforms = lib.platforms.darwin;
   };

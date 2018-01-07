@@ -49,6 +49,7 @@ let
         esp-idf-env.x86_64-darwin
         haskell-env.x86_64-darwin
         nixops-env.x86_64-darwin
+        nixtools-env.x86_64-darwin
         nodejs-env.x86_64-darwin
         opsec-env.x86_64-darwin
         perl-env.x86_64-darwin
