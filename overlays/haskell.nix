@@ -42,6 +42,7 @@ in rec
       structured-haskell-mode
       stylish-haskell
     ];
+    meta.platforms = self.haskellPackages802.ghc.meta.platforms;
   };
 
   haskell7103-env = buildEnv {
@@ -58,6 +59,7 @@ in rec
       structured-haskell-mode
       stylish-haskell
     ];
+    meta.platforms = self.haskellPackages7103.ghc.meta.platforms;
   };
 
   haskell784-env = buildEnv {
@@ -74,6 +76,7 @@ in rec
       structured-haskell-mode
       stylish-haskell
     ];
+    meta.platforms = self.haskellPackages784.ghc.meta.platforms;
   };
 
 
@@ -90,6 +93,7 @@ in rec
       haskellPackages802.cabal-install
       stack
     ];
+    meta.platforms = self.stack.meta.platforms;
   };
 
 }
