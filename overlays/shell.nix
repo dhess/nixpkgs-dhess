@@ -21,8 +21,8 @@ in
       gnupg
       gnused
       haskellPackages.dhess-ssh-keygen
-      haskellPackages.fm-assistant
-      haskellPackages.hpack-convert
+      #haskellPackages.fm-assistant
+      #haskellPackages.hpack-convert
       nox
       pinentry_mac
       lftp
