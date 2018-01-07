@@ -11,10 +11,7 @@ let
   problems = hp: with hp; [
     llvm-general
     pipes-shell
-    pipes-transduce
     pipes-zlib
-    # By way of pipes-transduce
-    process-streaming
     uniqueid
   ];
 
@@ -37,6 +34,7 @@ in
       machines-process = doJailbreak super.machines-process;
       monad-log = doJailbreak super.monad-log;
       pipes-errors = doJailbreak super.pipes-errors;
+      pipes-transduce = dontCheck super.pipes-transduce;
       repline = doJailbreak super.repline;
       shelly = dontCheck (doJailbreak super.shelly);
       streaming-utils = doJailbreak super.streaming-utils;
