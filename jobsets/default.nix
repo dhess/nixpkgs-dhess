@@ -35,7 +35,7 @@ let
     };
   };
 
-  mkNixpkgsDhess = nixpkgsDhessBranch: nixpkgsRev: {
+  mkAlternate = nixpkgsDhessBranch: nixpkgsRev: {
     checkinterval = 60 * 60 * 12;
     schedulingshares = 100;
     inputs = {
@@ -45,8 +45,9 @@ let
   };
 
   mainJobsets = with pkgs.lib; mapAttrs (name: settings: defaultSettings // settings) (rec {
-    nixpkgs-dhess = {};
-    nixpkgs-dhess-nixpkgs-unstable = mkNixpkgsDhess "master" "nixpkgs-unstable";
+    master = {};
+    nixpkgs-unstable = mkAlternate "master" "nixpkgs-unstable";
+    nixpkgs-1709-darwin = mkAlternate "master" "nixpkgs-17.09-darwin";
   });
 
   jobsetsAttrs = mainJobsets;
