@@ -57,6 +57,7 @@ let
         shell-env.x86_64-darwin
 
         # Stuff that's not in a buildEnv.
+        nix.x86_64-darwin
         cacert.x86_64-darwin
       ];
     };
