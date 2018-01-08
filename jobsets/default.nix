@@ -47,7 +47,7 @@ let
   mainJobsets = with pkgs.lib; mapAttrs (name: settings: defaultSettings // settings) (rec {
     master = {};
     nixpkgs-unstable = mkAlternate "master" "nixpkgs-unstable";
-    nixpkgs-1709-darwin = mkAlternate "master" "nixpkgs-17.09-darwin";
+    nixpkgs-1709-darwin = mkAlternate "17.09" "nixpkgs-17.09-darwin";
   });
 
   jobsetsAttrs = mainJobsets;
