@@ -24,7 +24,6 @@ in rec
            company-nixos-options = super.melpaPackages.company-nixos-options;
            dante = super.melpaPackages.dante;
            dash = super.melpaPackages.dash;
-           dhall-mode = super.melpaPackages.dhall-mode;
            elpy = super.melpaPackages.elpy;
            exec-path-from-shell = super.melpaPackages.exec-path-from-shell;
            flycheck = super.melpaPackages.flycheck;
@@ -63,7 +62,6 @@ in rec
          epkgs.dante
          epkgs.dash
          epkgs.dash-at-point
-         epkgs.dhall-mode
          epkgs.elpy
          epkgs.exec-path-from-shell
          epkgs.flycheck
