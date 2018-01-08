@@ -13,6 +13,7 @@ in
       nix-index
       nix-info
       nix-repl
+      nix-serve
       nox
       pypi2nix
     ];
