@@ -36,7 +36,7 @@ let
   };
 
   mkAlternate = nixpkgsDhessBranch: nixpkgsRev: {
-    checkinterval = 60 * 60 * 12;
+    checkinterval = 60;
     schedulingshares = 100;
     inputs = {
       nixpkgs_override = mkFetchGithub "https://github.com/NixOS/nixpkgs-channels.git ${nixpkgsRev}";
