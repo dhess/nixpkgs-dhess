@@ -39,9 +39,11 @@ let
 
   jobs = {
 
+    ## Core packages.
+
     x86_64-darwin = pkgs.releaseTools.aggregate {
       name = "nixpkgs-dhess-x86_64-darwin";
-      meta.description = "nixpkgs-dhess overlay packages (x86_64-darwin)";
+      meta.description = "nixpkgs-dhess overlay packages, core set (x86_64-darwin)";
       meta.maintainer = lib.maintainers.dhess;
       constituents = with jobs; [
         ansible-env.x86_64-darwin
@@ -64,10 +66,25 @@ let
       ];
     };
 
+
+    ## Extra stuff. Once we have channels, we could advance the core
+    ## set faster than this one, if this one has more build problems.
+
+    x86_64-darwin-extra = pkgs.releaseTools.aggregate {
+      name = "nixpkgs-dhess-x86_64-darwin-extra";
+      meta.description = "nixpkgs-dhess overlay packages, extras (x86_64-darwin)";
+      meta.maintainer = lib.maintainers.dhess;
+      constituents = with jobs; [
+        extensive-haskell-env.x86_64-darwin
+      ];
+    };
+
   } // (mapTestOn (packagePlatforms pkgs));
 
 in
 {
   inherit (jobs) x86_64-darwin;
+  inherit (jobs) x86_64-darwin-extra;
 }
 // enumerateConstituents jobs.x86_64-darwin
+// enumerateConstituents jobs.x86_64-darwin-extra
