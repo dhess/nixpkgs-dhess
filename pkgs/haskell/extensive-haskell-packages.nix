@@ -1,12 +1,14 @@
-## The list of all packages I want to have installed by default in
-## each Haskell environment that I build, independent of the version
-## of GHC.
+{ corePackages ? import ./core-haskell-packages.nix
+} :
 
-hp: with hp; [
+## The expanded list of all packages I want to have installed by
+## default in each Haskell environment that I build, independent of
+## the version of GHC.
+
+hp: with hp; (corePackages hp) ++ [
   accelerate
   acid-state
   ad
-  aeson
   aeson-pretty
   alex
   algebra
@@ -17,12 +19,10 @@ hp: with hp; [
   amazonka-s3
   amazonka-sns
   amazonka-sqs
-  async
   attoparsec
   auto
   autoexporter
   auto-update
-  base-compat
   bifunctors
   binary
   bits
@@ -31,8 +31,6 @@ hp: with hp; [
   blazeT
   bloodhound
   bytes
-  bytestring
-  cereal
   charset
   clay
   comonad
@@ -43,7 +41,6 @@ hp: with hp; [
   configurator
   configuration-tools
   constraints
-  containers
   contravariant
   criterion
   cryptonite
@@ -52,15 +49,9 @@ hp: with hp; [
   dhall
   dhall-json
   dhall-nix
-  doctest
-  directory
   distributive
-  either
-  errors
   ether
-  exceptions
   fgl
-  filepath
   foldl
   folds
   formatting
@@ -68,7 +59,6 @@ hp: with hp; [
   GraphSCC
   groupoids
   hakyll
-  happy
   haskeline
   haxl
   haxl-amazonka
@@ -76,23 +66,16 @@ hp: with hp; [
   hex
   hnix
   hoopl
-  hspec
   hspec-expectations-lens
   hspec-megaparsec
   hspec-wai
   hspec-webdriver
-  http-api-data
-  http-client
-  http-client-tls
-  http-types
   inline-c
   intervals
   ivory
   kan-extensions
   katip
   katip-elasticsearch
-  lens
-  lens-aeson
   lens-action
   lifted-async
   lifted-base
@@ -110,20 +93,14 @@ hp: with hp; [
   machines-io
   machines-process
   managed
-  megaparsec
   memory
-  monad-control
   monad-log
-  monad-logger
   monad-logger-syslog
   morte
-  mtl
   network
   network-attoparsec
   numeric-extras
-  optparse-applicative
   optparse-generic
-  optparse-text
   pandoc
   parsec
   parsec-free
@@ -138,13 +115,8 @@ hp: with hp; [
   pipes-safe
   pipes-shell
   pipes-zlib
-  prettyprinter
   process
   process-streaming
-  profunctors
-  protolude
-  QuickCheck
-  quickcheck-instances
   recursion-schemes
   reducers
   reflection
@@ -154,8 +126,6 @@ hp: with hp; [
   safe
   safecopy
   sbv
-  semigroupoids
-  semigroups
   servant
   servant-client
   servant-docs
@@ -165,9 +135,7 @@ hp: with hp; [
   servant-swagger-ui
   singletons
   shelly
-  show-prettyprint
   smtLib
-  stm
   stm-containers
   streaming
   streaming-bytestring
@@ -178,23 +146,13 @@ hp: with hp; [
   tasty
   tasty-hunit
   temporary
-  text
   thyme
   time
   time-recurrence
   turtle
-  transformers
-  transformers-base
-  transformers-compat
   trifecta
   uniplate
   uniqueid
-  unix
-  unix-bytestring
-  unix-compat
-  unordered-containers
-  vector
-  vector-instances
   wai
   wai-extra
   warp

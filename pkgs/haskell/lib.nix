@@ -2,10 +2,7 @@
 
 rec {
 
-  mkInstalledPackages = problems: hp: with hp;
-  let
-    desiredHaskellPackages = import ./haskell-packages.nix;
-  in
+  mkInstalledPackages = desiredHaskellPackages: problems: hp: with hp;
     lib.subtractLists (problems hp) (desiredHaskellPackages hp);
 
 }

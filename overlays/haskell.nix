@@ -10,15 +10,29 @@ in rec
   haskell-env = buildEnv {
     name = "haskell-env";
     paths = with self.haskellPackages; [
-      (ghcWithHoogle self.installedHaskellPackages)
+      (ghcWithHoogle self.coreHaskellPackages)
 
       cabal-install
       #dash-haskell
       #ghc-mod
       hindent
-      hlint
       hpack
-      hscolour
+      structured-haskell-mode
+      stylish-haskell
+    ];
+    meta.platforms = self.haskellPackages.ghc.meta.platforms;
+  };
+
+  extensive-haskell-env = buildEnv {
+    name = "extensive-haskell-env";
+    paths = with self.haskellPackages; [
+      (ghcWithHoogle self.extensiveHaskellPackages)
+
+      cabal-install
+      #dash-haskell
+      #ghc-mod
+      hindent
+      hpack
       structured-haskell-mode
       stylish-haskell
     ];
@@ -28,15 +42,13 @@ in rec
   haskell802-env = buildEnv {
     name = "haskell802-env";
     paths = with self.haskellPackages802; [
-      (ghcWithHoogle self.installedHaskellPackages802)
+      (ghcWithHoogle self.coreHaskellPackages802)
 
       cabal-install
       #dash-haskell
       ghc-mod
       hindent
-      hlint
       hpack
-      hscolour
       structured-haskell-mode
       stylish-haskell
     ];
@@ -46,14 +58,12 @@ in rec
   haskell7103-env = buildEnv {
     name = "haskell7103-env";
     paths = with self.haskellPackages7103; [
-      (ghcWithPackages self.installedHaskellPackages7103)
+      (ghcWithPackages self.coreHaskellPackages7103)
 
       cabal-install
       #dash-haskell
       hindent
-      hlint
       hpack
-      hscolour
       structured-haskell-mode
       stylish-haskell
     ];

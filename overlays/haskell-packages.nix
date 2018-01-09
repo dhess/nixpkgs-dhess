@@ -15,6 +15,9 @@ let
     uniqueid
   ];
 
+  corePackages = import ../pkgs/haskell/core-haskell-packages.nix;
+  extensivePackages = import ../pkgs/haskell/extensive-haskell-packages.nix { inherit corePackages; };
+
 in
 {
 
@@ -46,6 +49,7 @@ in
     }
   );
 
-  installedHaskellPackages = lib.mkInstalledPackages problems;
+  coreHaskellPackages = lib.mkInstalledPackages corePackages problems;
+  extensiveHaskellPackages = lib.mkInstalledPackages extensivePackages problems;
 
 }
