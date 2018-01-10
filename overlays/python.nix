@@ -2,14 +2,14 @@ self: super:
 
 let
 
-  inherit (super) python;
-  inherit (self) pythonPackages;
+  inherit (self) python pythonPackages;
 
 in
 {
-  python-env = python.buildEnv.override {
 
+  python-env = python.buildEnv.override {
     ignoreCollisions = true;
+
     extraLibs = with pythonPackages; [
 
       flake8
@@ -21,6 +21,6 @@ in
       yapf
 
     ];
-
   };
+
 }

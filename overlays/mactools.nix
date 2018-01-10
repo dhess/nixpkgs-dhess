@@ -4,13 +4,14 @@ self: super:
 
 let
 
-  inherit (super) lib buildEnv;
+  inherit (super) buildEnv;
+  inherit (self) lib;
 
 in
 {
   mactools-env = buildEnv {
     name = "mactools-env";
-    paths = with super; [
+    paths = with self; [
       ansible
       atomicparsley
       ffmpeg

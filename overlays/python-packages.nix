@@ -2,7 +2,8 @@ self: super:
 
 let
 
-  inherit (super) callPackage python pythonPackages;
+  inherit (super) callPackage;
+  inherit (self) python;
 
   my-python-packages = pp: pp.override {
     overrides = self: super: with python.lib; rec {
@@ -18,5 +19,5 @@ let
 
 in
 {
-  pythonPackages = my-python-packages pythonPackages;
+  pythonPackages = my-python-packages super.pythonPackages;
 }

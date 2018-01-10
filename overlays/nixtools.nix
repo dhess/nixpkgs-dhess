@@ -2,13 +2,14 @@ self: super:
 
 let
 
-  inherit (super) lib buildEnv;
+  inherit (super) buildEnv;
+  inherit (self) lib;
 
 in
 {
   nixtools-env = buildEnv {
     name = "nixtools-env";
-    paths = with super; [
+    paths = with self; [
       cabal2nix
       nix-index
       nix-info

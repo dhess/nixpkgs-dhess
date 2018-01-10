@@ -4,7 +4,7 @@ let
 
   inherit (super) callPackage;
 
-in rec
+in
 {
 
   unbound-block-hosts = callPackage ../pkgs/unbound-block-hosts {};

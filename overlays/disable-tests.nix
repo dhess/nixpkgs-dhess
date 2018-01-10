@@ -6,7 +6,7 @@ let
 
   overrideDerivation = super.stdenv.lib.overrideDerivation;
 
-in rec
+in
 {
 
   ## Broken on macOS.

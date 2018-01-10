@@ -7,6 +7,7 @@ let
 
 in
 {
+
   # Note that, unlike with Python, Nix perl will not find its packages
   # automatically. You must set $PERL5LIB to
   # $HOME/.nix-profile/lib/perl5/site_perl
@@ -18,6 +19,7 @@ in
       DevelTrace
       FileCopyRecursive
     ];
-    meta.platforms = super.perlPackages.perl.meta.platforms;
+    meta.platforms = perlPackages.perl.meta.platforms;
   };
+
 }

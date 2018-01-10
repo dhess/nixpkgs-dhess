@@ -4,10 +4,12 @@ self: super:
 
 let
 
-  inherit (super) lib buildEnv;
+  inherit (super) buildEnv;
+  inherit (self) lib;
 
 in
 {
+
   shell-env = buildEnv {
     name = "shell-env";
     paths = with self; [
@@ -33,4 +35,5 @@ in
     ];
     meta.platforms = lib.platforms.all;
   };
+
 }

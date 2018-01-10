@@ -2,9 +2,10 @@ self: super:
 
 let
 
-  inherit (super) lib callPackage buildEnv;
+  inherit (super) callPackage buildEnv;
+  inherit (self) lib;
 
-in rec
+in
 {
 
   crosstool-ng-xtensa = callPackage ../pkgs/crosstool-ng-xtensa {};
@@ -13,7 +14,7 @@ in rec
   esp-idf-env = buildEnv {
     name = "esp-idf-env";
     paths = [
-      xtensa-esp32-toolchain
+      self.xtensa-esp32-toolchain
     ];
     meta.platforms = lib.platforms.darwin;
   };

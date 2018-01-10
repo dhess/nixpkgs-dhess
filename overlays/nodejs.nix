@@ -3,13 +3,14 @@ self: super:
 let
 
   inherit (super) buildEnv;
+  inherit (self) nodejs-6_x;
 
 in
 {
   nodejs-env = buildEnv {
     name = "nodejs-env";
-    paths = with super; [ nodejs-6_x ] ++ (with super.nodePackages; [
+    paths = [ nodejs-6_x ] ++ (with self.nodePackages; [
     ]);
-    meta.platforms = super.nodejs-6_x.meta.platforms;
+    meta.platforms = nodejs-6_x.meta.platforms;
   };
 }

@@ -4,18 +4,19 @@ let
 
   inherit (super) buildEnv emacsPackagesNgGen;
 
-in rec
+in
 {
   ## Override the emacs used in any expression.
-  emacs = super.emacs25Macport;
+  emacs = self.emacs25Macport;
 
   ## Emacs.
   emacs-env = buildEnv {
     name = "emacs-env";
-    meta.platforms = emacs.meta.platforms;
-    paths = with super; [
+    meta.platforms = self.emacs.meta.platforms;
+    paths = [
       (let customEmacsPackages =
-         (emacsPackagesNgGen emacs).overrideScope (super: self: {
+        # XXX dhess - can we do this with an overlay?
+        (emacsPackagesNgGen self.emacs).overrideScope (super: self: {
            # Use unstable MELPA for these packages.
            async = super.melpaPackages.async;
            auto-compile = super.melpaPackages.auto-compile;
@@ -90,8 +91,9 @@ in rec
          epkgs.yasnippet
          epkgs.znc
         ]))
-      aspell
-      aspellDicts.en
+
+      self.aspell
+      self.aspellDicts.en
     ];
   };
 }

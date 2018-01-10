@@ -4,7 +4,7 @@ let
 
   inherit (super) callPackage;
 
-in rec
+in
 {
-
+  # None at the moment.
 }

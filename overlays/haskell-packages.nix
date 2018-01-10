@@ -2,10 +2,10 @@ self: super:
 
 let
 
-  inherit (super) haskell;
+  inherit (self) haskell;
 
   lib = import ../pkgs/haskell/lib.nix {
-    inherit (super) lib;
+    inherit (self) lib;
   };
 
   problems = hp: with hp; [

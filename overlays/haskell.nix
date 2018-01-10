@@ -2,9 +2,10 @@ self: super:
 
 let
 
-  inherit (super) lib buildEnv haskell;
+  inherit (super) buildEnv;
+  inherit (self) haskell;
 
-in rec
+in
 {
 
   haskell-env = buildEnv {

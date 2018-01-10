@@ -11,9 +11,10 @@ self: super:
 
 let
 
-  inherit (super) lib buildEnv python pythonPackages;
+  inherit (super) buildEnv;
+  inherit (self) python pythonPackages;
 
-in rec
+in
 {
 
   ansible-python-env = python.buildEnv.override {
@@ -24,8 +25,8 @@ in rec
   ansible-env = buildEnv {
     name = "ansible-env";
     paths = [
-      super.ansible2
-      ansible-python-env
+      self.ansible2
+      self.ansible-python-env
     ];
     meta.platforms = super.ansible2.meta.platforms;
   };

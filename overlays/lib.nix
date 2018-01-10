@@ -4,10 +4,10 @@ let
 
   inherit (super) callPackage;
 
-in rec
+in
 {
 
-  lib = super.lib // rec {
+  lib = (super.lib or {}) // {
 
     maintainers = super.lib.maintainers // {
       dhess-pers = "Drew Hess <src@drewhess.com>";

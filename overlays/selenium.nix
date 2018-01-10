@@ -8,10 +8,10 @@ in
 {
   selenium-env = buildEnv {
     name = "selenium-env";
-    paths = with super; [
+    paths = with self; [
       chromedriver
       selenium-server-standalone
     ];
-    meta.platforms = super.chromedriver.meta.platforms;
+    meta.platforms = self.chromedriver.meta.platforms;
   };
 }

@@ -1,14 +1,16 @@
 self: super:
 
 let
-  inherit (super) stdenv haskell;
+
+  inherit (self) haskell;
 
   lib = import ../pkgs/haskell/lib.nix {
-    inherit (super) lib;
+    inherit (self) lib;
   };
 
 in
 {
+
   haskellPackages802 = haskell.packages.ghc802.extend (self: super:
     with haskell.lib;
     rec {
@@ -54,4 +56,5 @@ in
     ];
   in
     lib.mkInstalledPackages problems;
+
 }
