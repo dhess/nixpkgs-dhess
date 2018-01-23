@@ -32,6 +32,7 @@ in
       concurrent-machines = doJailbreak super.concurrent-machines;
       filesystem-trees = doJailbreak super.filesystem-trees;
       hakyll = doJailbreak super.hakyll;
+      hpio = dontCheck super.hpio;
       katip-elasticsearch = dontCheck super.katip-elasticsearch;
       lzma = doJailbreak super.lzma;
       machines-process = doJailbreak super.machines-process;
