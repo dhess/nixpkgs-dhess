@@ -17,6 +17,7 @@ in
       aws_shell
       gitAndTools.git-crypt
       gitAndTools.git-extras
+      gnumake
       gnupg
       gnused
       haskellPackages.dhess-ssh-keygen
