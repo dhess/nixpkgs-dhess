@@ -2,11 +2,11 @@
 
 pythonPackages.buildPythonApplication rec {
   name = "onkyo-eiscp-${version}";
-  version = "1.0";
+  version = "1.2.4";
 
   src = fetchurl {
     url = "mirror://pypi/o/onkyo-eiscp/onkyo-eiscp-${version}.tar.gz";
-    sha256 = "173zxfq2xnsdkpc18np0d5253f1j81s58gxvryk3dqs3s9cv71k2";
+    sha256 = "0qb5w2g2cnckq7psh92g1w3gf76437x1vwfhwnd247wshs5h7hxj";
   };
 
   propagatedBuildInputs = with pythonPackages; [ docopt netifaces ];
