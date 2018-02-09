@@ -40,38 +40,6 @@ in
     meta.platforms = self.haskellPackages.ghc.meta.platforms;
   };
 
-  haskell802-env = buildEnv {
-    name = "haskell802-env";
-    paths = with self.haskellPackages802; [
-      (ghcWithHoogle self.coreHaskellPackages802)
-
-      cabal-install
-      #dash-haskell
-      ghc-mod
-      hindent
-      hpack
-      structured-haskell-mode
-      stylish-haskell
-    ];
-    meta.platforms = self.haskellPackages802.ghc.meta.platforms;
-  };
-
-  haskell7103-env = buildEnv {
-    name = "haskell7103-env";
-    paths = with self.haskellPackages7103; [
-      (ghcWithPackages self.coreHaskellPackages7103)
-
-      cabal-install
-      #dash-haskell
-      hindent
-      hpack
-      structured-haskell-mode
-      stylish-haskell
-    ];
-    meta.platforms = self.haskellPackages7103.ghc.meta.platforms;
-  };
-
-
   ## Stack environments.
   #
   # These are typically just stack, cabal-install, and a particular
