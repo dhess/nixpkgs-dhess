@@ -35,6 +35,14 @@ let
     };
   };
 
+  mkBranch = nixpkgsDhessBranch: {
+    checkinterval = 60;
+    schedulingshares = 100;
+    inputs = {
+      nixpkgsDhess = mkFetchGithub "${nixpkgsDhessUri} ${nixpkgsDhessBranch}";
+    };
+  };
+
   mkAlternate = nixpkgsDhessBranch: nixpkgsRev: {
     checkinterval = 60;
     schedulingshares = 100;
@@ -57,6 +65,7 @@ let
     master = {};
     nixpkgs-unstable = mkAlternate "master" "nixpkgs-unstable";
     nixpkgs = mkNixpkgs "master" "master";
+    hydra-fix = mkBranch "hydra-fix";
   });
 
   jobsetsAttrs = mainJobsets;
