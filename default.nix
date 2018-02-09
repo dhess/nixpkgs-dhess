@@ -2,9 +2,17 @@
 
 self: super:
 
+let
+
+  localLib = import ./lib.nix;
+
+in
+
 with super.lib;
 
 (foldl' (flip extends) (_: super) [
+
+  (import localLib.fetchNixPkgsLibQuixoftic)
 
   (import ./overlays/ansible.nix)
   (import ./overlays/cacert.nix)
