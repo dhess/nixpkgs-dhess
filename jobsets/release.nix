@@ -1,6 +1,7 @@
 let
 
-  fixedNixPkgs = (import ../lib.nix).fetchNixPkgs;
+  localLib = (import ../lib.nix);
+  fixedNixPkgs = localLib.fetchNixPkgs;
 
 in
 
@@ -8,7 +9,7 @@ in
 , scrubJobs ? true
 , nixpkgsArgs ? {
     config = { allowUnfree = true; allowBroken = true; inHydra = true; };
-    overlays = [ (import ../.) ];
+    overlays = [ (import (localLib.cleanSource ../.)) ];
   }
 }:
 
