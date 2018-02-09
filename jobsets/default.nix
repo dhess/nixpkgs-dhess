@@ -44,10 +44,19 @@ let
     };
   };
 
+  mkNixpkgs = nixpkgsDhessBranch: nixpkgsRev: {
+    checkinterval = 60 * 60 * 12;
+    schedulingshares = 100;
+    inputs = {
+      nixpkgs_override = mkFetchGithub "https://github.com/NixOS/nixpkgs.git ${nixpkgsRev}";
+      nixpkgsDhess = mkFetchGithub "${nixpkgsDhessUri} ${nixpkgsDhessBranch}";
+    };
+  };
+
   mainJobsets = with pkgs.lib; mapAttrs (name: settings: defaultSettings // settings) (rec {
     master = {};
     nixpkgs-unstable = mkAlternate "master" "nixpkgs-unstable";
-    nixpkgs-1709-darwin = mkAlternate "17.09" "nixpkgs-17.09-darwin";
+    nixpkgs = mkNixpkgs "master" "master";
   });
 
   jobsetsAttrs = mainJobsets;
