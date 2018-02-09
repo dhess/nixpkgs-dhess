@@ -1,6 +1,7 @@
 let
 
   fixedNixPkgs = (import ../lib.nix).fetchNixPkgs;
+  fixedNixPkgsLibQuixoftic = (import ../lib.nix).fetchNixPkgsLibQuixoftic;
 
 in
 
@@ -8,7 +9,10 @@ in
 , scrubJobs ? true
 , nixpkgsArgs ? {
     config = { allowUnfree = true; allowBroken = true; inHydra = true; };
-    overlays = [ (import ../.) ];
+    overlays = [
+      (import ../.)
+      (import fixedNixPkgsLibQuixoftic)
+    ];
   }
 }:
 
@@ -17,6 +21,8 @@ with import (fixedNixPkgs + "/pkgs/top-level/release-lib.nix") {
 };
 
 let
+
+  nixpkgs-lib-quixoftic = (import fixedNixPkgsLibQuixoftic) { self = {}; super = pkgs; };
 
   jobs = {
 

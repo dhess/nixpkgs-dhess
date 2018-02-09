@@ -12,8 +12,6 @@ with super.lib;
 
 (foldl' (flip extends) (_: super) [
 
-  (import localLib.fetchNixPkgsLibQuixoftic)
-
   (import ./overlays/ansible.nix)
   (import ./overlays/cacert.nix)
   (import ./overlays/disable-tests.nix)
