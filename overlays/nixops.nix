@@ -3,15 +3,18 @@ self: super:
 let
 
   inherit (super) buildEnv;
-  inherit (self) nixops;
+  targetSystem = super.targetPlatform.system;
+  fixedNixOps = (import ../lib.nix).fetchNixOps;
 
 in
 {
+  nixops = (import "${fixedNixOps}/release.nix" {}).build.${targetSystem};
+
   nixops-env = buildEnv {
     name = "nixops-env";
     paths = [
-      nixops
+      self.nixops
     ];
-    meta.platforms = nixops.meta.platforms;
+    meta.platforms = self.nixops.meta.platforms;
   };
 }
