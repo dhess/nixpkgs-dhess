@@ -50,7 +50,7 @@ in
   stack-env = buildEnv {
     name = "stack-env";
     paths = with self; [
-      haskellPackages802.cabal-install
+      cabal-install
       stack
     ];
     meta.platforms = self.stack.meta.platforms;
