@@ -65,7 +65,6 @@ let
     master = {};
     nixpkgs-unstable = mkAlternate "master" "nixpkgs-unstable";
     nixpkgs = mkNixpkgs "master" "master";
-    hydra-fix = mkBranch "hydra-fix";
   });
 
   jobsetsAttrs = mainJobsets;
