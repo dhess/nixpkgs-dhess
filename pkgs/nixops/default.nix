@@ -31,6 +31,7 @@ python2Packages.buildPythonApplication rec {
     pysqlite
     datadog
     digital-ocean
+    vultr
   ];
 
   doCheck = false;
