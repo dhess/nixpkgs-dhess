@@ -9,11 +9,10 @@ let
 in
 {
 
-  ## Broken on macOS.
-  #
+  ## Left as an example.
 
-  libuv = overrideDerivation super.libuv (oldAttrs : {
-    doCheck = false;
-  });
+  # libuv = overrideDerivation super.libuv (oldAttrs : {
+  #   doCheck = false;
+  # });
 
 }
