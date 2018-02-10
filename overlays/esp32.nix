@@ -16,7 +16,7 @@ in
     paths = [
       self.xtensa-esp32-toolchain
     ];
-    meta.platforms = lib.platforms.darwin;
+    meta.platforms = [ "x86_64-linux" "x86_64-darwin" ];
   };
 
 }
