@@ -10,16 +10,7 @@ python2Packages.buildPythonApplication rec {
   name = "nixops-${version}";
   version = "1.6pre-git";
 
-  src = let
-    src' = fetchFromGitHub {
-      owner =  "dhess";
-      repo =   "nixops";
-      rev =    "5014e17f5ab9a6eb481b705efb9bb8e0def3b738";
-      sha256 = "0rsn6xsr3hgy0szdim0if838bh1z7akbd4k8rik3bkmnwcrwlsgi";
-    };
-    release = pkgs.callPackage "${src'}/release.nix" {};
-  in
-    "${release.tarball}/tarballs/nixops-1.6pre0_abcdef.tar.bz2";
+  src = ./nixops-1.6pre0_abcdef.tar.bz2;
 
   buildInputs = [ libxslt ];
 
