@@ -34,8 +34,8 @@ stdenv.mkDerivation rec {
     substituteInPlace ./libexec/gcc/xtensa-esp32-elf/5.2.0/install-tools/mkheaders \
       --replace "/bin/bash" "${bash}/bin/bash"
   '' + stdenv.lib.optionalString stdenv.isLinux ''
-    find . -type f -perm 0755 -exec \
-      patchelf --set-interpreter $(cat $NIX_CC/nix-support/dynamic-linker) {} ;
+    find . -type f -perm -0755 -exec patchelf \
+      --interpreter "$(cat $NIX_CC/nix-support/dynamic-linker)" {} \;
   '';
 
   installPhase = ''
