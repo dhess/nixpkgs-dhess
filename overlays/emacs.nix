@@ -7,7 +7,9 @@ let
 in
 {
   ## Override the emacs used in any expression.
-  emacs = self.emacs25Macport;
+  emacs = if super.stdenv.system == "x86_64-darwin"
+          then self.emacs25Macport
+          else self.emacs25-nox;
 
   ## Emacs.
   emacs-env = buildEnv {
