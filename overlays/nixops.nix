@@ -3,7 +3,7 @@ self: super:
 let
 
   inherit (super) buildEnv;
-  targetSystem = super.stdenv.system;
+  targetSystem = super.targetPlatform.system;
   fixedNixOps = (import ../lib.nix).fetchNixOps;
 
 in
