@@ -3,15 +3,16 @@ self: super:
 let
 
   inherit (super) buildEnv;
-  inherit (self) nixops;
 
 in
 {
+  nixops = super.callPackage ../pkgs/nixops {};
+
   nixops-env = buildEnv {
     name = "nixops-env";
     paths = [
-      nixops
+      self.nixops
     ];
-    meta.platforms = nixops.meta.platforms;
+    meta.platforms = self.nixops.meta.platforms;
   };
 }
