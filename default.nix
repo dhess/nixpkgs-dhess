@@ -24,6 +24,7 @@ with super.lib;
   (import ./overlays/misc.nix)
   (import ./overlays/nixtools.nix)
   (import ./overlays/nixops.nix)
+  (import ./overlays/nixops-tarball.nix)
   (import ./overlays/nodejs.nix)
   (import ./overlays/opsec.nix)
   (import ./overlays/perl.nix)

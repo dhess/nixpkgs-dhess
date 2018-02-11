@@ -4,13 +4,14 @@
 , libxslt
 , docbook5_xsl
 , openssh
+, nixops-tarball
 }:
 
 python2Packages.buildPythonApplication rec {
   name = "nixops-${version}";
   version = "1.6pre-git";
 
-  src = ./nixops-1.6pre0_abcdef.tar.bz2;
+  src = "${nixops-tarball}/tarballs/nixops-1.6pre0_abcdef.tar.bz2";
 
   buildInputs = [ libxslt ];
 
