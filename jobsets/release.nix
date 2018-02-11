@@ -1,9 +1,7 @@
 let
 
-  localLib = import ../lib.nix;
-  fixedNixPkgs = localLib.fetchNixPkgs;
-  fixedNixPkgsLibQuixoftic = localLib.fetchNixPkgsLibQuixoftic;
-  fixedNixOps = localLib.fetchNixOps;
+  fixedNixPkgs = (import ../lib.nix).fetchNixPkgs;
+  fixedNixPkgsLibQuixoftic = (import ../lib.nix).fetchNixPkgsLibQuixoftic;
 
 in
 
@@ -25,21 +23,6 @@ with import (fixedNixPkgs + "/pkgs/top-level/release-lib.nix") {
 let
 
   nixpkgs-lib-quixoftic = (import fixedNixPkgsLibQuixoftic) { self = {}; super = pkgs; };
-
-
-  ## For Hydra builds, we import NixOps here, build the tarball, and
-  ## then slap it into the package set below when we create jobs,
-  ## where our overlay can find it. This allows us to "import from
-  ## distribution" on the Hydra server, which is cool as long as it's
-  ## in the eval phase.
-  ##
-  ## Note that which system we evaluate it for here is not
-  ## particularly important, since the generated tarball is
-  ## cross-platform.
-
-  nixops-tarball = (import "${fixedNixOps}/release.nix" {
-    nixpkgs = fixedNixPkgs;
-  }).tarball;
 
   jobs = {
 
@@ -120,7 +103,7 @@ let
       ];
     };
 
-  } // (mapTestOn (packagePlatforms (pkgs // { inherit nixops-tarball; })));
+  } // (mapTestOn (packagePlatforms pkgs));
 
 in
 {
