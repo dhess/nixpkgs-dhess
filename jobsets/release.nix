@@ -50,6 +50,7 @@ let
 
         # Stuff that's not in a buildEnv.
         nix.x86_64-darwin
+        nixUnstable.x86_64-darwin
         cacert.x86_64-darwin
       ];
     };
@@ -88,6 +89,7 @@ let
 
         # Stuff that's not in a buildEnv.
         nix.x86_64-linux
+        nixUnstable.x86_64-linux
         cacert.x86_64-linux
       ];
     };
