@@ -61,4 +61,5 @@ in
     packages = self.extensiveHaskellPackages;
   };
 
+  fm-assistant = haskell.lib.justStaticExecutables (self.haskellPackages.fm-assistant);
 }

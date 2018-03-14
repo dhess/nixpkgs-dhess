@@ -15,7 +15,7 @@ in
       ansible
       atomicparsley
       ffmpeg
-      #haskellPackages.fm-assistant
+      fm-assistant
       pinentry_mac
       lftp
       terminal-notifier
