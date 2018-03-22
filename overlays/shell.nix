@@ -31,7 +31,6 @@ in
       unbound-block-hosts
       unrar
       wget
-      texlive.combined.scheme-medium
       xz
     ];
     meta.platforms = lib.platforms.all;
