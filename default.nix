@@ -31,6 +31,7 @@ with super.lib;
   (import ./overlays/python.nix)
   (import ./overlays/selenium.nix)
   (import ./overlays/shell.nix)
+  (import ./overlays/tex.nix)
   (import ./overlays/version-overrides.nix)
 
 ]) self
