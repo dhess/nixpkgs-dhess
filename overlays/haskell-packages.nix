@@ -33,6 +33,7 @@ in
       filesystem-trees = doJailbreak super.filesystem-trees;
       hakyll = doJailbreak super.hakyll;
       hpio = dontCheck super.hpio;
+      jailbreak-cabal = self.callPackage ../pkgs/haskell/jailbreak-cabal-1.3.3.nix {};
       katip-elasticsearch = dontCheck super.katip-elasticsearch;
       lzma = doJailbreak super.lzma;
       machines-process = doJailbreak super.machines-process;
