@@ -25,6 +25,7 @@ in
            company = super.melpaPackages.company;
            company-cabal = super.melpaPackages.company-cabal;
            company-nixos-options = super.melpaPackages.company-nixos-options;
+           company-terraform = super.melpaPackages.company-terraform;
            dante = super.melpaPackages.dante;
            dash = super.melpaPackages.dash;
            dhall-mode = super.melpaPackages.dhall-mode;
@@ -45,6 +46,7 @@ in
            popup = super.melpaPackages.popup;
            projectile = super.melpaPackages.projectile;
            shm = super.melpaPackages.shm;
+           terraform-mode = super.melpaPackages.terraform-mode;
            web-mode = super.melpaPackages.web-mode;
            znc = super.melpaPackages.znc;
 
@@ -61,6 +63,7 @@ in
          epkgs.company
          epkgs.company-cabal
          epkgs.company-nixos-options
+         epkgs.company-terraform
          epkgs.counsel
          epkgs.counsel-projectile
          epkgs.dante
@@ -87,6 +90,7 @@ in
          epkgs.popup
          epkgs.projectile
          epkgs.shm
+         epkgs.terraform-mode
          epkgs.use-package
          epkgs.web-mode
          epkgs.yaml-mode
