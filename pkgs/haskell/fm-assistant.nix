@@ -9,8 +9,8 @@ mkDerivation {
   version = "0.6.0.0";
   src = fetchgit {
     url = git://github.com/dhess/fm-assistant;
-    rev = "861d0359e5f373a533296ab1742d329d5614813e";
-    sha256 = "1a47zkh3a881m13jz2blfnxj9z4z71rvw08dh0v8cr28i1s4333z";
+    rev = "5bdff9732c8ccbe99982f779737070d2d4fc87cd";
+    sha256 = "0iyf3yj57f9cg2d07qnwrbz061gid37dbmj6sfvj26i6lwnz9mhg";
   };
   isLibrary = true;
   isExecutable = true;
