@@ -17,7 +17,7 @@ in
       #dash-haskell
       #ghc-mod
       hindent
-      hpack_0_27_0
+      hpack
       structured-haskell-mode
       stylish-haskell
     ];
@@ -33,7 +33,7 @@ in
       #dash-haskell
       #ghc-mod
       hindent
-      hpack_0_27_0
+      hpack
       structured-haskell-mode
       stylish-haskell
     ];
