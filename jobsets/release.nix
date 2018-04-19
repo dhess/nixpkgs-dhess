@@ -8,7 +8,7 @@ in
 { supportedSystems ? [ "x86_64-darwin" "x86_64-linux" ]
 , scrubJobs ? true
 , nixpkgsArgs ? {
-    config = { allowUnfree = true; allowBroken = true; inHydra = true; };
+    config = { allowUnfree = true; inHydra = true; };
     overlays = [
       (import ../.)
       (import fixedNixPkgsLibQuixoftic)
