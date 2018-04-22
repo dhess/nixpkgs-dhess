@@ -8,9 +8,9 @@
 
 python2Packages.buildPythonApplication rec {
   name = "nixops-${version}";
-  version = "1.6pre-git";
+  version = "1.6.1pre-git";
 
-  src = ./nixops-1.6pre0_abcdef.tar.bz2;
+  src = ./nixops-1.6.1pre0_abcdef.tar.bz2;
 
   buildInputs = [ libxslt ];
 
