@@ -3,7 +3,7 @@
 , fetchgit
 , autoconf
 , automake
-, binutils-raw
+, binutils
 , bison
 , flex
 , gettext
@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
     leaveDotGit = true;
   };
 
-  nativeBuildInputs = [ autoconf automake binutils-raw bison flex
+  nativeBuildInputs = [ autoconf automake binutils bison flex
     gettext git gperf help2man libtool ncurses texinfo which
     wget ];
 
