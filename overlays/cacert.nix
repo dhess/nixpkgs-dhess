@@ -2,7 +2,7 @@ self: super:
 
 let
 
-  drewHessCAPem = (builtins.readFile ../static/drewhess-ca.pem);
+  drewHessCAPem = (builtins.readFile ../static/Drew_Hess_CA_Root.pem);
   drewHessCACerts = {
     "Drew Hess Certificate Authority" = drewHessCAPem;
   };
