@@ -13,6 +13,7 @@ let
     parsec-free
     pipes-shell
     pipes-zlib
+    stm-containers
     uniqueid
   ];
 
