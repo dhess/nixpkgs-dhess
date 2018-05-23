@@ -41,7 +41,7 @@ in
       monad-log = doJailbreak super.monad-log;
       pipes-errors = doJailbreak super.pipes-errors;
       pipes-group = doJailbreak super.pipes-group;
-      pipes-transduce = dontCheck super.pipes-transduce;
+      pipes-transduce = doJailbreak (dontCheck super.pipes-transduce);
       repline = doJailbreak super.repline;
       shelly = dontCheck (doJailbreak super.shelly);
       stm-containers = doJailbreak super.stm-containers;
