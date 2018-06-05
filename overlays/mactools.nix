@@ -19,6 +19,7 @@ in
       pinentry_mac
       lftp
       terminal-notifier
+      wireguard-tools
       youtube-dl
     ];
     meta.platforms = lib.platforms.darwin;
