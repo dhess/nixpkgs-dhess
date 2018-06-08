@@ -9,6 +9,7 @@ let
   };
 
   problems = hp: with hp; [
+    concurrent-machines
     llvm-general
     parsec-free
     pipes-shell
