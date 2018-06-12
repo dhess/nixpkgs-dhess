@@ -10,6 +10,7 @@ let
 
   problems = hp: with hp; [
     concurrent-machines
+    haxl-amazonka
     llvm-general
     parsec-free
     pipes-shell
