@@ -14,6 +14,7 @@ in
     paths = with self; [
       ansible
       atomicparsley
+      cocoapods
       ffmpeg
       fm-assistant
       pinentry_mac
