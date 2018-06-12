@@ -10,8 +10,8 @@ let
 
   problems = hp: with hp; [
     concurrent-machines
-    dhall-nix
     haxl-amazonka
+    hnix
     llvm-general
     parsec-free
     pipes-shell
@@ -35,6 +35,7 @@ in
 
       Lykah = doJailbreak super.Lykah;
       concurrent-machines = doJailbreak super.concurrent-machines;
+      dhall-nix = doJailbreak super.dhall-nix;
       foldl = super.foldl_1_4_0;
       filesystem-trees = doJailbreak super.filesystem-trees;
       hakyll = doJailbreak super.hakyll;
