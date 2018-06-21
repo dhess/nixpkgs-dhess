@@ -23,6 +23,7 @@ in
       haskellPackages.dhess-ssh-keygen
       #haskellPackages.hpack-convert
       mediainfo
+      mosh
       pwgen
       scsh
       speedtest-cli
