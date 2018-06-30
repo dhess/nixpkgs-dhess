@@ -16,6 +16,7 @@ hp: with hp; [
   exceptions
   fail
   filepath
+  generic-lens
   happy
   hlint
   hscolour
@@ -37,6 +38,7 @@ hp: with hp; [
   protolude
   QuickCheck
   quickcheck-instances
+  safe-exceptions
   semigroupoids
   semigroups
   show-prettyprint
