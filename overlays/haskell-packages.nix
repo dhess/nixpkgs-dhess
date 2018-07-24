@@ -36,7 +36,6 @@ in
       Lykah = doJailbreak super.Lykah;
       concurrent-machines = doJailbreak super.concurrent-machines;
       dhall-nix = doJailbreak super.dhall-nix;
-      foldl = super.foldl_1_4_0;
       filesystem-trees = doJailbreak super.filesystem-trees;
       hakyll = doJailbreak super.hakyll;
       hpio = dontCheck super.hpio;
