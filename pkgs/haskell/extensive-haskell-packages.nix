@@ -70,6 +70,8 @@ hp: with hp; (corePackages hp) ++ [
   hspec-megaparsec
   hspec-wai
   hspec-webdriver
+  hw-json
+  hw-json-lens
   inline-c
   intervals
   ivory
