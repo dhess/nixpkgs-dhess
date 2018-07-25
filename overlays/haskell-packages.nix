@@ -37,6 +37,7 @@ in
       concurrent-machines = doJailbreak super.concurrent-machines;
       dhall-nix = doJailbreak super.dhall-nix;
       filesystem-trees = doJailbreak super.filesystem-trees;
+      generic-lens = dontCheck super.generic-lens;
       hakyll = doJailbreak super.hakyll;
       hpio = dontCheck super.hpio;
       katip-elasticsearch = dontCheck super.katip-elasticsearch;
@@ -45,6 +46,7 @@ in
       monad-log = doJailbreak super.monad-log;
       pipes-errors = doJailbreak super.pipes-errors;
       pipes-group = doJailbreak super.pipes-group;
+      pipes-text = doJailbreak super.pipes-text;
       pipes-transduce = dontCheck super.pipes-transduce;
       repline = doJailbreak super.repline;
       shelly = dontCheck (doJailbreak super.shelly);
