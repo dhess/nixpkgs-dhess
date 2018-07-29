@@ -44,6 +44,7 @@ let
         opsec-env.x86_64-darwin
         perl-env.x86_64-darwin
         python-env.x86_64-darwin
+        security-env.x86_64-darwin
         selenium-env.x86_64-darwin
         shell-env.x86_64-darwin
         stack-env.x86_64-darwin
@@ -86,6 +87,7 @@ let
         opsec-env.x86_64-linux
         perl-env.x86_64-linux
         python-env.x86_64-linux
+        security-env.x86_64-linux
         shell-env.x86_64-linux
         stack-env.x86_64-linux
         terraform-env.x86_64-linux

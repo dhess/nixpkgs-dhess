@@ -29,6 +29,7 @@ with super.lib;
   (import ./overlays/perl.nix)
   (import ./overlays/python-packages.nix)
   (import ./overlays/python.nix)
+  (import ./overlays/security.nix)
   (import ./overlays/selenium.nix)
   (import ./overlays/shell.nix)
   (import ./overlays/terraform.nix)
