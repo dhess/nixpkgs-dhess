@@ -39,6 +39,7 @@ in
       filesystem-trees = doJailbreak super.filesystem-trees;
       generic-lens = dontCheck super.generic-lens;
       hakyll = doJailbreak super.hakyll;
+      hoopl = dontCheck super.hoopl;
       hpio = dontCheck super.hpio;
       katip-elasticsearch = dontCheck super.katip-elasticsearch;
       lzma = doJailbreak super.lzma;
