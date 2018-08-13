@@ -13,7 +13,6 @@ in
       cabal2nix
       nix-index
       nix-info
-      nix-repl
       nix-serve
       nox
       pypi2nix
