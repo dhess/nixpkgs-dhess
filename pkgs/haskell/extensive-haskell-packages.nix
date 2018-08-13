@@ -46,9 +46,6 @@ hp: with hp; (corePackages hp) ++ [
   cryptonite
   data-has
   deepseq
-  dhall
-  dhall-json
-  dhall-nix
   distributive
   ether
   fgl

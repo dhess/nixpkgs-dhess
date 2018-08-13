@@ -9,6 +9,9 @@ hp: with hp; [
   bytestring
   cereal
   containers
+  dhall
+  dhall-json
+  dhall-nix
   doctest
   directory
   either

@@ -15,6 +15,7 @@ with super.lib;
   (import ./overlays/ansible.nix)
   (import ./overlays/cacert.nix)
   (import ./overlays/disable-tests.nix)
+  (import ./overlays/dhall.nix)
   (import ./overlays/emacs.nix)
   (import ./overlays/esp32.nix)
   (import ./overlays/haskell-packages.nix)
