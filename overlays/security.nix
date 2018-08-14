@@ -8,12 +8,10 @@ let
 in
 {
 
-  cfssl = callPackage ../pkgs/security/cfssl {};
-
   security-env = buildEnv {
     name = "security-env";
     paths = [
-      self.cfssl
+      super.cfssl
     ];
     meta.platforms = [ "x86_64-linux" "x86_64-darwin" ];
   };
