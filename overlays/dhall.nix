@@ -10,8 +10,9 @@ in
     name = "dhall-env";
     paths = [
       super.dhall
-      super.dhall-nix
-      super.dhall-json
+      # Already included by haskellEnv.
+      #super.dhall-nix
+      #super.dhall-json
     ];
     meta.platforms = super.dhall.meta.platforms;
   };
