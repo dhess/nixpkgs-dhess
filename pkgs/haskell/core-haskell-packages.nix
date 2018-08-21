@@ -4,6 +4,7 @@
 
 hp: with hp; [
   aeson
+  aeson-iproute
   async
   base-compat
   bytestring
