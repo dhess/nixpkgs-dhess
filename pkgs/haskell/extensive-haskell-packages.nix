@@ -7,11 +7,7 @@
 
 hp: with hp; (corePackages hp) ++ [
   accelerate
-  acid-state
   ad
-  aeson-pretty
-  alex
-  algebra
   amazonka
   amazonka-ec2
   amazonka-route53
@@ -19,60 +15,35 @@ hp: with hp; (corePackages hp) ++ [
   amazonka-s3
   amazonka-sns
   amazonka-sqs
-  attoparsec
   auto
   autoexporter
   auto-update
-  bifunctors
-  binary
-  bits
   blaze-html
   blaze-markup
   blazeT
   bloodhound
-  bytes
-  charset
   clay
-  comonad
   concurrent-machines
-  cond
-  conduit
   conduit-combinators
   configurator
   configuration-tools
   constraints
-  contravariant
-  criterion
-  cryptonite
-  data-has
-  deepseq
-  distributive
   ether
   fgl
-  foldl
-  folds
   formatting
-  free
   GraphSCC
-  groupoids
   hakyll
-  haskeline
   haxl
   haxl-amazonka
   hpio
   hex
   hnix
   hoopl
-  hspec-expectations-lens
-  hspec-megaparsec
-  hspec-wai
   hspec-webdriver
   hw-json
   hw-json-lens
-  inline-c
   intervals
   ivory
-  kan-extensions
   katip
   katip-elasticsearch
   lens-action
@@ -91,72 +62,33 @@ hp: with hp; (corePackages hp) ++ [
   machines-directory
   machines-io
   machines-process
-  managed
   memory
-  monad-log
-  monad-logger-syslog
-  morte
-  network
-  network-attoparsec
   numeric-extras
-  optparse-generic
-  pandoc
-  parsec
   parsec-free
-  parsers
-  path
-  path-io
-  pipes
   pipes-attoparsec
-  pipes-bytestring
   pipes-errors
   pipes-group
-  pipes-safe
   pipes-shell
   pipes-zlib
   process
   process-streaming
-  recursion-schemes
   reducers
-  reflection
   regex-applicative
   repline
-  resourcet
-  safe
   safecopy
   sbv
-  servant
-  servant-client
-  servant-docs
-  servant-lucid
-  servant-server
-  servant-swagger
-  servant-swagger-ui
-  singletons
   shelly
   smtLib
   stm-containers
-  streaming
-  streaming-bytestring
-  streaming-utils
-  strict
-  swagger2
   tar
-  tasty
   tasty-hunit
   temporary
   thyme
-  time
   time-recurrence
   turtle
-  trifecta
   uniplate
   uniqueid
-  wai
-  wai-extra
-  warp
   webdriver
   wires
-  zippers
   zlib-lens
 ]

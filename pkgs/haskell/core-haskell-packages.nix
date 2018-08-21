@@ -3,60 +3,126 @@
 ## version of GHC.
 
 hp: with hp; [
+  acid-state
   aeson
   aeson-iproute
+  aeson-pretty
+  alex
+  algebra
   async
+  attoparsec
   base-compat
+  bifunctors
+  binary
+  bits
+  bytes
   bytestring
   cereal
+  charset
+  comonad
+  cond
+  conduit
   containers
+  contravariant
+  criterion
+  cryptonite
+  data-has
+  deepseq
   dhall
   dhall-json
   dhall-nix
-  doctest
   directory
+  distributive
+  doctest
   either
   errors
   exceptions
   fail
   filepath
+  foldl
+  folds
+  free
   generic-lens
+  groupoids
   happy
+  haskeline
   hlint
   hscolour
   hspec
+  hspec-expectations-lens
+  hspec-megaparsec
+  hspec-wai
   http-api-data
   http-client
   http-client-tls
   http-types
+  inline-c
   iproute
+  kan-extensions
   lens
   lens-aeson
+  managed
   megaparsec
   monad-control
+  monad-log
   monad-logger
+  monad-logger-syslog
   mtl
+  network
+  network-attoparsec
   optparse-applicative
+  optparse-generic
   optparse-text
+  pandoc
+  parsec
+  parsers
+  path
+  path-io
+  pipes
+  pipes-bytestring
+  pipes-safe
   prettyprinter
   profunctors
   protolude
   QuickCheck
   quickcheck-instances
+  recursion-schemes
+  reflection
+  resourcet
+  safe
   safe-exceptions
   semigroupoids
   semigroups
+  servant
+  servant-client
+  servant-docs
+  servant-lucid
+  servant-server
+  servant-swagger
+  servant-swagger-ui
   show-prettyprint
+  singletons
   stm
+  streaming
+  streaming-bytestring
+  streaming-utils
+  strict
+  swagger2
+  tasty
   text
   time
   transformers
   transformers-base
   transformers-compat
+  trifecta
   unix
   unix-bytestring
   unix-compat
   unordered-containers
   vector
   vector-instances
+  wai
+  wai-extra
+  warp
+  zippers
 ]
