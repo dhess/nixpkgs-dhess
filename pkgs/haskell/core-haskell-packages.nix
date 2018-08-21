@@ -28,6 +28,7 @@ hp: with hp; [
   http-client
   http-client-tls
   http-types
+  iproute
   lens
   lens-aeson
   megaparsec
