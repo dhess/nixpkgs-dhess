@@ -4,7 +4,7 @@
     "description": "nixpkgs-dhess jobsets",
     "nixexprinput": "src",
     "nixexprpath": "jobsets/default.nix",
-    "checkinterval": 60,
+    "checkinterval": 300o,
     "schedulingshares": 100,
     "enableemail": true,
     "emailoverride": "",

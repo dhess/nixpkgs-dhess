@@ -24,7 +24,7 @@ let
     hidden = false;
     keepnr = 10;
     schedulingshares = 400;
-    checkinterval = 60;
+    checkinterval = 300;
     enableemail = false;
     emailoverride = "";
     nixexprpath = "jobsets/release.nix";
@@ -36,7 +36,7 @@ let
   };
 
   mkBranch = nixpkgsDhessBranch: {
-    checkinterval = 60;
+    checkinterval = 300;
     schedulingshares = 100;
     inputs = {
       nixpkgsDhess = mkFetchGithub "${nixpkgsDhessUri} ${nixpkgsDhessBranch}";
@@ -44,7 +44,7 @@ let
   };
 
   mkAlternate = nixpkgsDhessBranch: nixpkgsRev: {
-    checkinterval = 60;
+    checkinterval = 300;
     schedulingshares = 100;
     inputs = {
       nixpkgs_override = mkFetchGithub "https://github.com/NixOS/nixpkgs-channels.git ${nixpkgsRev}";
