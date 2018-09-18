@@ -22,7 +22,6 @@ in
       gnused
       haskellPackages.dhess-ssh-keygen
       #haskellPackages.hpack-convert
-      keybase
       mediainfo
       mosh
       pwgen
