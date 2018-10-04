@@ -13,7 +13,7 @@ in
     paths = with self.haskellPackages; [
       (ghcWithHoogle self.coreHaskellPackages)
 
-      cabal-install
+      #cabal-install
       #dash-haskell
       #ghc-mod
       hindent
@@ -29,7 +29,7 @@ in
     paths = with self.haskellPackages; [
       (ghcWithHoogle self.extensiveHaskellPackages)
 
-      cabal-install
+      #cabal-install
       #dash-haskell
       #ghc-mod
       hindent
