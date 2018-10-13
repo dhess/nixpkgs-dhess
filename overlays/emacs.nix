@@ -18,7 +18,7 @@ in
     paths = [
       (let customEmacsPackages =
         # XXX dhess - can we do this with an overlay?
-        (emacsPackagesNgGen self.emacs).overrideScope (super: self: {
+        (emacsPackagesNgGen self.emacs).overrideScope' (self: super: {
            # Use unstable MELPA for these packages.
            async = super.melpaPackages.async;
            auto-compile = super.melpaPackages.auto-compile;
