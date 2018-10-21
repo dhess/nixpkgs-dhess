@@ -32,6 +32,7 @@ in
            elpy = super.melpaPackages.elpy;
            exec-path-from-shell = super.melpaPackages.exec-path-from-shell;
            find-file-in-project = super.melpaPackages.find-file-in-project;
+           flx-ido = super.melpaPackages.flx-ido;
            flycheck = super.melpaPackages.flycheck;
            flycheck-haskell = super.melpaPackages.flycheck-haskell;
            ghc-mod = super.melpaPackages.ghc-mod;
@@ -77,6 +78,7 @@ in
          epkgs.elpy
          epkgs.exec-path-from-shell
          epkgs.find-file-in-project
+         epkgs.flx-ido
          epkgs.flycheck
          epkgs.flycheck-haskell
          #epkgs.ghc-mod
