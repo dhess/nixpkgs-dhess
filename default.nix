@@ -33,7 +33,6 @@ with super.lib;
   (import ./overlays/security.nix)
   (import ./overlays/selenium.nix)
   (import ./overlays/shell.nix)
-  (import ./overlays/terraform.nix)
   (import ./overlays/tex.nix)
   (import ./overlays/version-overrides.nix)
 
