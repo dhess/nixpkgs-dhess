@@ -33,14 +33,12 @@ in
            elpy = super.melpaPackages.elpy;
            exec-path-from-shell = super.melpaPackages.exec-path-from-shell;
            find-file-in-project = super.melpaPackages.find-file-in-project;
-           flx-ido = super.melpaPackages.flx-ido;
            flycheck = super.melpaPackages.flycheck;
            flycheck-haskell = super.melpaPackages.flycheck-haskell;
            ghc-mod = super.melpaPackages.ghc-mod;
            haskell-mode = super.melpaPackages.haskell-mode;
            hindent = super.melpaPackages.hindent;
            hlint-refactor = super.melpaPackages.hlint-refactor;
-           ido-vertical-mode = super.melpaPackages.ido-vertical-mode;
            magit = super.melpaPackages.magit;
            magit-popup = super.melpaPackages.magit-popup;
            markdown-mode = super.melpaPackages.markdown-mode;
@@ -56,6 +54,12 @@ in
            terraform-mode = super.melpaPackages.terraform-mode;
            web-mode = super.melpaPackages.web-mode;
            znc = super.melpaPackages.znc;
+
+           # Ido enhancements.
+           flx-ido = super.melpaPackages.flx-ido;
+           ido-describe-bindings = super.melpaPackages.ido-describe-bindings;
+           ido-vertical-mode = super.melpaPackages.ido-vertical-mode;
+           smex = super.melpaPackages.smex;
 
            # Ivy suite
            ivy = super.melpaPackages.ivy;
@@ -89,6 +93,7 @@ in
          epkgs.haskell-mode
          epkgs.hindent
          epkgs.hlint-refactor
+         epkgs.ido-describe-bindings
          epkgs.ido-vertical-mode
          epkgs.magit
          epkgs.magit-popup
@@ -104,6 +109,7 @@ in
          epkgs.rg
          epkgs.ripgrep
          epkgs.shm
+         epkgs.smex
          epkgs.terraform-mode
          epkgs.use-package
          epkgs.web-mode
