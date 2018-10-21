@@ -28,6 +28,7 @@ in
            company-terraform = super.melpaPackages.company-terraform;
            dante = super.melpaPackages.dante;
            dash = super.melpaPackages.dash;
+           deadgrep = super.melpaPackages.deadgrep;
            dhall-mode = super.melpaPackages.dhall-mode;
            elpy = super.melpaPackages.elpy;
            exec-path-from-shell = super.melpaPackages.exec-path-from-shell;
@@ -39,6 +40,7 @@ in
            haskell-mode = super.melpaPackages.haskell-mode;
            hindent = super.melpaPackages.hindent;
            hlint-refactor = super.melpaPackages.hlint-refactor;
+           ido-vertical-mode = super.melpaPackages.ido-vertical-mode;
            magit = super.melpaPackages.magit;
            magit-popup = super.melpaPackages.magit-popup;
            markdown-mode = super.melpaPackages.markdown-mode;
@@ -74,6 +76,7 @@ in
          epkgs.dante
          epkgs.dash
          epkgs.dash-at-point
+         epkgs.deadgrep
          epkgs.dhall-mode
          epkgs.elpy
          epkgs.exec-path-from-shell
@@ -86,6 +89,7 @@ in
          epkgs.haskell-mode
          epkgs.hindent
          epkgs.hlint-refactor
+         epkgs.ido-vertical-mode
          epkgs.magit
          epkgs.magit-popup
          epkgs.markdown-mode
