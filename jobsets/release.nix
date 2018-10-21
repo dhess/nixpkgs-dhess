@@ -49,7 +49,6 @@ let
         selenium-env.x86_64-darwin
         shell-env.x86_64-darwin
         stack-env.x86_64-darwin
-        terraform-env.x86_64-darwin
         tex-env.x86_64-darwin
 
         # Stuff that's not in a buildEnv.
@@ -91,7 +90,6 @@ let
         security-env.x86_64-linux
         shell-env.x86_64-linux
         stack-env.x86_64-linux
-        terraform-env.x86_64-linux
         tex-env.x86_64-linux
 
         # Stuff that's not in a buildEnv.
