@@ -46,6 +46,9 @@ in
            nixos-options = super.melpaPackages.nixos-options;
            popup = super.melpaPackages.popup;
            projectile = super.melpaPackages.projectile;
+           projectile-ripgrep = super.melpaPackages.projectile-ripgrep;
+           rg = super.melpaPackages.rg;
+           ripgrep = super.melpaPackages.ripgrep;
            shm = super.melpaPackages.shm;
            terraform-mode = super.melpaPackages.terraform-mode;
            web-mode = super.melpaPackages.web-mode;
@@ -91,6 +94,9 @@ in
          epkgs.paredit
          epkgs.popup
          epkgs.projectile
+         epkgs.projectile-ripgrep
+         epkgs.rg
+         epkgs.ripgrep
          epkgs.shm
          epkgs.terraform-mode
          epkgs.use-package
@@ -102,6 +108,7 @@ in
 
       self.aspell
       self.aspellDicts.en
+      self.ripgrep
     ];
   };
 }

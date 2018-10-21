@@ -25,6 +25,7 @@ in
       mediainfo
       mosh
       pwgen
+      ripgrep
       scsh
       speedtest-cli
       tarsnap
