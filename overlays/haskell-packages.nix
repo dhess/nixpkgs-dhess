@@ -9,9 +9,12 @@ let
   };
 
   problems = hp: with hp; [
+    Lykah
+    blazeT
     concurrent-machines
     haxl-amazonka
     hnix
+    hspec-webdriver
     llvm-general
     parsec-free
     pipes-shell
@@ -33,7 +36,6 @@ in
       dhess-ssh-keygen = doJailbreak (self.callPackage ../pkgs/haskell/dhess-ssh-keygen.nix {});
       fm-assistant = dontCheck (self.callPackage ../pkgs/haskell/fm-assistant.nix {});
 
-      Lykah = doJailbreak super.Lykah;
       concurrent-machines = doJailbreak super.concurrent-machines;
       dhall-nix = doJailbreak super.dhall-nix;
       filesystem-trees = doJailbreak super.filesystem-trees;
@@ -41,6 +43,7 @@ in
       hakyll = doJailbreak super.hakyll;
       hoopl = dontCheck super.hoopl;
       hpio = dontCheck super.hpio;
+      hw-json-lens = doJailbreak super.hw-json-lens;
       katip-elasticsearch = dontCheck super.katip-elasticsearch;
       lzma = doJailbreak super.lzma;
       machines-process = doJailbreak super.machines-process;

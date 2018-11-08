@@ -28,7 +28,6 @@ hp: with hp; (corePackages hp) ++ [
   configurator
   configuration-tools
   constraints
-  ether
   fgl
   formatting
   GraphSCC
