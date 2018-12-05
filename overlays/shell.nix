@@ -22,6 +22,7 @@ in
       gnused
       haskellPackages.dhess-ssh-keygen
       #haskellPackages.hpack-convert
+      htop
       mediainfo
       mosh
       pwgen
