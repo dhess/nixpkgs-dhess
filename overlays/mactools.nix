@@ -12,7 +12,6 @@ in
   mactools-env = buildEnv {
     name = "mactools-env";
     paths = with self; [
-      ansible
       atomicparsley
       cocoapods
       ffmpeg

@@ -12,7 +12,6 @@ with super.lib;
 
 (foldl' (flip extends) (_: super) [
 
-  (import ./overlays/ansible.nix)
   (import ./overlays/cacert.nix)
   (import ./overlays/disable-tests.nix)
   (import ./overlays/dhall.nix)

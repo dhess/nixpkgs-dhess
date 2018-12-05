@@ -8,8 +8,8 @@ in
 {
   ## Override the emacs used in any expression.
   emacs = if super.stdenv.system == "x86_64-darwin"
-          then self.emacs25Macport
-          else self.emacs25-nox;
+          then self.emacsMacport
+          else self.emacs26-nox;
 
   ## Emacs.
   emacs-env = buildEnv {

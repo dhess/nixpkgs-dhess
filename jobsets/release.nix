@@ -33,7 +33,6 @@ let
       meta.description = "nixpkgs-dhess overlay packages, core set (x86_64-darwin)";
       meta.maintainer = lib.maintainers.dhess;
       constituents = with jobs; [
-        ansible-env.x86_64-darwin
         dhall-env.x86_64-darwin
         emacs-env.x86_64-darwin
         esp-idf-env.x86_64-darwin
