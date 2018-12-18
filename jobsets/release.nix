@@ -66,8 +66,6 @@ let
       meta.maintainer = lib.maintainers.dhess;
       constituents = with jobs; [
         extensive-haskell-env.x86_64-darwin
-        #extensive-ihaskell-env.x86_64-darwin
-        ihaskell-env.x86_64-darwin
       ];
     };
 

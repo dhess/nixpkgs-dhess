@@ -67,13 +67,5 @@ in
   coreHaskellPackages = lib.mkInstalledPackages corePackages problems;
   extensiveHaskellPackages = lib.mkInstalledPackages extensivePackages problems;
 
-  core-ihaskell = super.ihaskell.override {
-    packages = self.coreHaskellPackages;
-  };
-
-  extensive-ihaskell = super.ihaskell.override {
-    packages = self.extensiveHaskellPackages;
-  };
-
   fm-assistant = haskell.lib.justStaticExecutables (self.haskellPackages.fm-assistant);
 }

@@ -40,22 +40,6 @@ in
     meta.platforms = self.haskellPackages.ghc.meta.platforms;
   };
 
-  ihaskell-env = buildEnv {
-    name = "ihaskell-env";
-    paths = [
-      self.core-ihaskell
-    ];
-    meta.platforms = self.lib.platforms.darwin;
-  };
-
-  extensive-ihaskell-env = buildEnv {
-    name = "extensive-ihaskell-env";
-    paths = [
-      self.extensive-ihaskell
-    ];
-    meta.platforms = self.lib.platforms.darwin;
-  };
-
   ## Stack environments.
   #
   # These are typically just stack, cabal-install, and a particular
