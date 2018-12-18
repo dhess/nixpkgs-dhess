@@ -30,6 +30,7 @@ in
            dash = super.melpaPackages.dash;
            deadgrep = super.melpaPackages.deadgrep;
            dhall-mode = super.melpaPackages.dhall-mode;
+           direnv = super.melpaPackages.direnv;
            elpy = super.melpaPackages.elpy;
            exec-path-from-shell = super.melpaPackages.exec-path-from-shell;
            find-file-in-project = super.melpaPackages.find-file-in-project;
@@ -82,6 +83,7 @@ in
          epkgs.dash-at-point
          epkgs.deadgrep
          epkgs.dhall-mode
+         epkgs.direnv
          epkgs.elpy
          epkgs.exec-path-from-shell
          epkgs.find-file-in-project
