@@ -5,38 +5,30 @@ let
   inherit (super) buildEnv;
   inherit (self) haskell;
 
+  exe = haskell.lib.justStaticExecutables;
+  mkHaskellPaths = hp: packageList: with hp; [
+    (ghcWithHoogle packageList)
+    (exe cabal-install)
+    #(exe dash-haskell)
+    #(exe ghc-mod)
+    (exe hindent)
+    (exe hpack)
+    (exe structured-haskell-mode)
+    (exe stylish-haskell)
+  ];
+
 in
 {
 
   haskell-env = buildEnv {
     name = "haskell-env";
-    paths = with self.haskellPackages; [
-      (ghcWithHoogle self.coreHaskellPackages)
-
-      #cabal-install
-      #dash-haskell
-      #ghc-mod
-      hindent
-      hpack
-      structured-haskell-mode
-      stylish-haskell
-    ];
+    paths = mkHaskellPaths self.haskellPackages self.coreHaskellPackages;
     meta.platforms = self.haskellPackages.ghc.meta.platforms;
   };
 
   extensive-haskell-env = buildEnv {
     name = "extensive-haskell-env";
-    paths = with self.haskellPackages; [
-      (ghcWithHoogle self.extensiveHaskellPackages)
-
-      #cabal-install
-      #dash-haskell
-      #ghc-mod
-      hindent
-      hpack
-      structured-haskell-mode
-      stylish-haskell
-    ];
+    paths = mkHaskellPaths self.haskellPackages self.extensiveHaskellPackages;
     meta.platforms = self.haskellPackages.ghc.meta.platforms;
   };
 
