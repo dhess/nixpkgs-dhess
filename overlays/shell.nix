@@ -15,6 +15,8 @@ in
     paths = with self; [
       awscli
       aws_shell
+      coreutils
+      direnv
       gitAndTools.git-crypt
       gitAndTools.git-extras
       gnumake
