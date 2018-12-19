@@ -16,8 +16,9 @@ in
       cocoapods
       ffmpeg
       fm-assistant
-      pinentry_mac
       lftp
+      pinentry_mac
+      qrencode
       terminal-notifier
       wireguard-tools
       youtube-dl
