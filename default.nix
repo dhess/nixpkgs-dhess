@@ -11,6 +11,8 @@ in
 with super.lib;
 
 (foldl' (flip extends) (_: super) [
+  (import localLib.fetchNixPkgsQuixoftic)
+  (import localLib.fetchNixPkgsLibQuixoftic)
 
   (import ./overlays/cacert.nix)
   (import ./overlays/disable-tests.nix)
@@ -35,5 +37,4 @@ with super.lib;
   (import ./overlays/shell.nix)
   (import ./overlays/tex.nix)
   (import ./overlays/version-overrides.nix)
-
 ]) self
