@@ -36,17 +36,10 @@ let
         esp-idf-env.x86_64-darwin
         haskell-env.x86_64-darwin
         mactools-env.x86_64-darwin
-        nixops-env.x86_64-darwin
         nixtools-env.x86_64-darwin
-        nodejs-env.x86_64-darwin
         opsec-env.x86_64-darwin
-        perl-env.x86_64-darwin
-        python-env.x86_64-darwin
-        security-env.x86_64-darwin
-        selenium-env.x86_64-darwin
         shell-env.x86_64-darwin
         stack-env.x86_64-darwin
-        tex-env.x86_64-darwin
 
         # Stuff that's not in a buildEnv.
         nix.x86_64-darwin
@@ -76,16 +69,10 @@ let
         emacs-env.x86_64-linux
         esp-idf-env.x86_64-linux
         haskell-env.x86_64-linux
-        nixops-env.x86_64-linux
         nixtools-env.x86_64-linux
-        nodejs-env.x86_64-linux
         opsec-env.x86_64-linux
-        perl-env.x86_64-linux
-        python-env.x86_64-linux
-        security-env.x86_64-linux
         shell-env.x86_64-linux
         stack-env.x86_64-linux
-        tex-env.x86_64-linux
 
         # Stuff that's not in a buildEnv.
         nix.x86_64-linux

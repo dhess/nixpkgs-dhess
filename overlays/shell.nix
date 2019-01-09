@@ -29,10 +29,7 @@ in
       mosh
       pwgen
       ripgrep
-      scsh
       speedtest-cli
-      tarsnap
-      tree
       unbound-block-hosts
       unrar
       wget

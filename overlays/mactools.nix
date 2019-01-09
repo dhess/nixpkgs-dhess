@@ -12,14 +12,11 @@ in
   mactools-env = buildEnv {
     name = "mactools-env";
     paths = with self; [
-      atomicparsley
-      cocoapods
       ffmpeg
       fm-assistant
       lftp
       pinentry_mac
       qrencode
-      terminal-notifier
       wireguard-tools
       youtube-dl
     ];
