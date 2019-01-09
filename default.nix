@@ -18,7 +18,6 @@ with super.lib;
   (import ./overlays/dhall.nix)
   (import ./overlays/disable-tests.nix)
   (import ./overlays/emacs.nix)
-  (import ./overlays/esp32.nix)
   (import ./overlays/fixes.nix)
   (import ./overlays/haskell-packages.nix)
   (import ./overlays/haskell.nix)
