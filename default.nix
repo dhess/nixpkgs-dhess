@@ -23,7 +23,6 @@ with super.lib;
   (import ./overlays/haskell-packages.nix)
   (import ./overlays/haskell.nix)
   (import ./overlays/mactools.nix)
-  (import ./overlays/misc.nix)
   (import ./overlays/nixtools.nix)
   (import ./overlays/opsec.nix)
   (import ./overlays/shell.nix)
