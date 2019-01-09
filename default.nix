@@ -16,9 +16,7 @@ with super.lib;
 
   (import ./overlays/cacert.nix)
   (import ./overlays/dhall.nix)
-  (import ./overlays/disable-tests.nix)
   (import ./overlays/emacs.nix)
-  (import ./overlays/fixes.nix)
   (import ./overlays/haskell-packages.nix)
   (import ./overlays/haskell.nix)
   (import ./overlays/mactools.nix)
