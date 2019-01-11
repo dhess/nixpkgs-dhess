@@ -22,8 +22,7 @@ in
       gnumake
       gnupg
       gnused
-      haskellPackages.dhess-ssh-keygen
-      #haskellPackages.hpack-convert
+      dhess-ssh-keygen
       htop
       mediainfo
       mosh

@@ -18,7 +18,6 @@ with super.lib;
   (import ./overlays/dhall.nix)
   (import ./overlays/emacs.nix)
   (import ./overlays/haskell-packages.nix)
-  (import ./overlays/haskell.nix)
   (import ./overlays/mactools.nix)
   (import ./overlays/nixtools.nix)
   (import ./overlays/opsec.nix)

@@ -2,70 +2,19 @@ self: super:
 
 let
 
-  inherit (self) haskell;
+  inherit (self.haskell.lib) doJailbreak dontCheck properExtend;
 
-  lib = import ../pkgs/haskell/lib.nix {
-    inherit (self) lib;
-  };
+  exeOnly = super.haskell.lib.justStaticExecutables;
 
-  problems = hp: with hp; [
-    Lykah
-    blazeT
-    concurrent-machines
-    haxl-amazonka
-    hnix
-    hspec-webdriver
-    llvm-general
-    parsec-free
-    pipes-shell
-    pipes-zlib
-    stm-containers
-    uniqueid
-  ];
-
-  corePackages = import ../pkgs/haskell/core-haskell-packages.nix;
-  extensivePackages = import ../pkgs/haskell/extensive-haskell-packages.nix { inherit corePackages; };
+  haskellPackages = properExtend super.haskellPackages (self: super: {
+    dhess-ssh-keygen = doJailbreak (super.callPackage ../pkgs/haskell/dhess-ssh-keygen.nix {});
+    fm-assistant = dontCheck (super.callPackage ../pkgs/haskell/fm-assistant.nix {});
+  });
 
 in
 {
+  inherit haskellPackages;
 
-  haskellPackages = super.haskellPackages.extend (self: super:
-    with haskell.lib;
-    rec {
-
-      dhess-ssh-keygen = doJailbreak (self.callPackage ../pkgs/haskell/dhess-ssh-keygen.nix {});
-      fm-assistant = dontCheck (self.callPackage ../pkgs/haskell/fm-assistant.nix {});
-
-      concurrent-machines = doJailbreak super.concurrent-machines;
-      dhall-nix = doJailbreak super.dhall-nix;
-      filesystem-trees = doJailbreak super.filesystem-trees;
-      generic-lens = dontCheck super.generic-lens;
-      hakyll = doJailbreak super.hakyll;
-      hoopl = dontCheck super.hoopl;
-      hpio = dontCheck super.hpio;
-      hw-json-lens = doJailbreak super.hw-json-lens;
-      katip-elasticsearch = dontCheck super.katip-elasticsearch;
-      lzma = doJailbreak super.lzma;
-      machines-process = doJailbreak super.machines-process;
-      monad-log = doJailbreak super.monad-log;
-      pipes-errors = doJailbreak super.pipes-errors;
-      pipes-group = doJailbreak super.pipes-group;
-      pipes-text = doJailbreak super.pipes-text;
-      pipes-transduce = dontCheck super.pipes-transduce;
-      repline = doJailbreak super.repline;
-      shelly = dontCheck (doJailbreak super.shelly);
-      stm-containers = doJailbreak super.stm-containers;
-      streaming-utils = doJailbreak super.streaming-utils;
-      text-show = dontCheck super.text-show;
-      these = doJailbreak super.these;
-      time-recurrence = doJailbreak super.time-recurrence;
-      wires = doJailbreak super.wires;
-
-    }
-  );
-
-  coreHaskellPackages = lib.mkInstalledPackages corePackages problems;
-  extensiveHaskellPackages = lib.mkInstalledPackages extensivePackages problems;
-
-  fm-assistant = haskell.lib.justStaticExecutables (self.haskellPackages.fm-assistant);
+  fm-assistant = exeOnly (self.haskellPackages.fm-assistant);
+  dhess-ssh-keygen = exeOnly (self.haskellPackages.dhess-ssh-keygen);
 }
