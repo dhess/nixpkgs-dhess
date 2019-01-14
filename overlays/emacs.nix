@@ -46,6 +46,7 @@ in
            nix-mode = super.melpaPackages.nix-mode;
            nix-sandbox = super.melpaPackages.nix-sandbox;
            nixos-options = super.melpaPackages.nixos-options;
+           org-ref = super.melpaPackages.org-ref;
            popup = super.melpaPackages.popup;
            projectile = super.melpaPackages.projectile;
            projectile-ripgrep = super.melpaPackages.projectile-ripgrep;
@@ -103,7 +104,8 @@ in
          epkgs.nix-mode
          epkgs.nix-sandbox
          epkgs.nixos-options
-         #epkgs.org-plus-contrib
+         epkgs.org-plus-contrib
+         epkgs.org-ref
          epkgs.paredit
          epkgs.popup
          epkgs.projectile
