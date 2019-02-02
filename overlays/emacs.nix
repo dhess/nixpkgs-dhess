@@ -93,13 +93,32 @@ let
     ];
   };
 
-  emacs-nox-env = mkEmacsEnv "emacs-nox-env" emacsNoXPackagesNg;
-  emacs-macport-env = mkEmacsEnv "emacs-macport-env" emacsMacportPackagesNg;
+  emacs-nox-env = pkgs.buildEnv {
+    name = "emacs-nox-env";
+    meta.platforms = emacs-nox.meta.platforms;
+    paths = [
+      (emacsNoXPackagesNg.emacsWithPackages coreEmacsPackages)
+      pkgs.aspell
+      pkgs.aspellDicts.en
+      pkgs.ripgrep
+    ];
+  };
+
+  emacs-macport-env = pkgs.buildEnv {
+    name = "emacs-macport-env";
+    meta.platforms = pkgs.emacsMacport.meta.platforms;
+    paths = [
+      (emacsMacportPackagesNg.emacsWithPackages macOSEmacsPackages)
+      pkgs.aspell
+      pkgs.aspellDicts.en
+      pkgs.ripgrep
+    ];
+  };
 
 in
 {
   inherit mkMelpaPackages mkEmacsEnv;
-  inherit emacs-nox;
-  inherit emacsMacportPackagesNg emacsNoXPackagesNg;
+  inherit emacs-nox emacsNoXPackagesNg;
+  inherit emacsMacportPackagesNg;
   inherit emacs-nox-env emacs-macport-env;  
 }
