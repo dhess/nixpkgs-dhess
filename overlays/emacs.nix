@@ -78,21 +78,6 @@ let
   emacsMacportPackagesNg = mkMelpaPackages pkgs.emacsMacport;
   emacsNoXPackagesNg = mkMelpaPackages emacs-nox;
 
-  mkEmacsEnv = name: emacsPackagesFun:
-  let
-    emacs = emacsPackagesFun.emacsWithPackages coreEmacsPackages;
-  in
-  pkgs.buildEnv {
-    inherit name;
-    meta.platforms = emacs.meta.platforms;
-    paths = [
-      emacs
-      pkgs.aspell
-      pkgs.aspellDicts.en
-      pkgs.ripgrep
-    ];
-  };
-
   emacs-nox-env = pkgs.buildEnv {
     name = "emacs-nox-env";
     meta.platforms = emacs-nox.meta.platforms;
@@ -117,7 +102,7 @@ let
 
 in
 {
-  inherit mkMelpaPackages mkEmacsEnv;
+  inherit mkMelpaPackages;
   inherit emacs-nox emacsNoXPackagesNg;
   inherit emacsMacportPackagesNg;
   inherit emacs-nox-env emacs-macport-env;  
