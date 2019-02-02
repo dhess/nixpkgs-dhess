@@ -31,7 +31,6 @@ let
       meta.description = "nixpkgs-dhess overlay packages, core set (x86_64-darwin)";
       meta.maintainer = lib.maintainers.dhess;
       constituents = with jobs; [
-        dhall-env.x86_64-darwin
         emacs-env.x86_64-darwin
         mactools-env.x86_64-darwin
         nixtools-env.x86_64-darwin
@@ -49,7 +48,6 @@ let
       meta.description = "nixpkgs-dhess overlay packages, core set (x86_64-linux)";
       meta.maintainer = lib.maintainers.dhess;
       constituents = with jobs; [
-        dhall-env.x86_64-linux
         emacs-env.x86_64-linux
         nixtools-env.x86_64-linux
         opsec-env.x86_64-linux
