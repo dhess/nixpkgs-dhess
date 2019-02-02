@@ -18,7 +18,6 @@ let
     dhall-mode
     direnv
     elpy
-    exec-path-from-shell
     find-file-in-project
     flx-ido
     flycheck
