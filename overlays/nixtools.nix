@@ -13,9 +13,7 @@ in
       cabal2nix
       nix-index
       nix-info
-      nix-serve
       nox
-      pypi2nix
     ];
     meta.platforms = lib.platforms.all;
   };

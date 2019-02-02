@@ -14,7 +14,7 @@ in
     paths = with self; [
       ffmpeg
       fm-assistant
-      lftp
+      mediainfo
       pinentry_mac
       qrencode
       wireguard-tools

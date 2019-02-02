@@ -13,8 +13,6 @@ in
   shell-env = buildEnv {
     name = "shell-env";
     paths = with self; [
-      awscli
-      aws_shell
       coreutils
       direnv
       gitAndTools.git-crypt
@@ -24,7 +22,7 @@ in
       gnused
       dhess-ssh-keygen
       htop
-      mediainfo
+      lftp
       mosh
       pwgen
       ripgrep
