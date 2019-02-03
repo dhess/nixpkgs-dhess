@@ -15,7 +15,6 @@ with super.lib;
   (import localLib.fetchNixPkgsLibQuixoftic)
 
   (import ./overlays/cacert.nix)
-  (import ./overlays/emacs.nix)
   (import ./overlays/haskell-packages.nix)
   (import ./overlays/mactools.nix)
   (import ./overlays/nixtools.nix)
